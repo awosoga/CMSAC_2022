@@ -745,6 +745,6 @@ qualifiedPlayers <- add_column(qualifiedPlayers, "PER" = PERlist)
 
 qualifiedPlayers <- qualifiedPlayers[order(qualifiedPlayers$VORP, decreasing = TRUE),]
 rownames(qualifiedPlayers) <- NULL
-kable(qualifiedPlayers[1:20,], caption = paste0("Individual Advanced Player Metrics for the Top 20 CEBL Players During the ", yr, " Season, Ordered by VORP"))
+kable(qualifiedPlayers[1:10,], caption = paste0("Individual Advanced Player Metrics for the Top 20 CEBL Players During the ", yr, " Season, Ordered by VORP"))
 options(warn = oldw)
 ```
