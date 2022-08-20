@@ -34,7 +34,7 @@ oldw <- getOption("warn")
 options(warn = -1)
 
 # Set Working Directory to where files are stored
-#setwd("~/path/to/CMSAC Files")
+#setwd("~/path/to/CMSAC_2022")
 
 ## Importing Data with Rio
 USPORTS_Men <- import("USPORTS Five Year Four Factors Training Set M.csv")
@@ -62,7 +62,7 @@ The women’s regression output *Model1_Women* was similar to the men’s model,
 
 I tested and compared the relative predictive abilities of the models. Even though the models without intercepts had superior R^2^ values to those with them in the regression output with the training set, they were very similar in predicting win percentage on the test data set. In fact, the models that included the constant term were slightly better, but not by a substantial amount. The men’s and women’s models also produced nearly identical results in explaining the variation of win percentage in the test set.
 ```{r, echo=FALSE}
-#setwd("~/path/to/CMSAC Files")
+#setwd("~/path/to/CMSAC_2022")
 
 # Make Predictions!
 set.seed(123)
