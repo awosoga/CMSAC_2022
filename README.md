@@ -95,23 +95,24 @@ models that utilize them relatively simple and incredibly informative. Since the
 be expressed in terms of percentages they are comparable across seasons and even eras of
 basketball with some slight modifications and estimations.
 
-*Effective Field Goal Percentage (eFG%) calculates how efficiently a team scores,
+* Effective Field Goal Percentage (eFG%) calculates how efficiently a team scores,
 adjusting for the extra value gained from a 3-point shot versus a 2-point shot. eFG% =
 FG+0.5(3P)
 FGA
-*Turnover Percentage (TOV%) measures the percentage of a team’s possessions that
+* Turnover Percentage (TOV%) measures the percentage of a team’s possessions that
 end in a turnover. Since possessions are not officially tracked in U SPORTS boxscores,
 estimates with good empirical accuracy are used in their place: POSS ≈ FGA+0.44×
 FTA − OFF + TO [3]. TOV % = TO
 POSS
-*Offensive Rebound Percentage (ORB%) is defined as the percentage of offensive
+* Offensive Rebound Percentage (ORB%) is defined as the percentage of offensive
 rebounds that a team obtains out of total available rebounds from missed field goal
 attempts and free throws. ORB% = OFF
 TOT
-*Free Throw Factor (FTF%), the percentage of “free" points a team gets per field goal
+* Free Throw Factor (FTF%), the percentage of “free" points a team gets per field goal
 attempt. It underscores the conventional wisdom that the ability to get to the line does
 not have much bearing if a team is not proficient at making free throws. FTF% = FT
 FGA
+
 The rest of the paper is organized in the following manner. The Four Factors of Basketball
 will be used in Section 2 on U SPORTS team data to model a team’s expected win percentage,
 recalculating the coefficients to better understand each factor’s impact on the men’s and
@@ -165,6 +166,7 @@ The inclusion of a constant term often has an inconsequential interpretation, bu
 could have significant ramifications on a model’s R2 and normality assumptions. Therefore,
 models with and without the constant term will be generated in the following manner and
 compared during analysis:
+
 <img width="729" alt="Screen Shot 2022-08-23 at 11 19 53 AM" src="https://user-images.githubusercontent.com/111665282/186223796-3b6b0f15-93d1-4128-a252-d19146334039.png">
 
 # 2.3 Analysis
