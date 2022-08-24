@@ -1,7 +1,8 @@
 # CMSAC_2022
 Supplementary Material for Carnegie Mellon Sports Analytics Conference Paper
+For Markdown Script, remember to set proper working directory!
 
-Beyond the Boxscore: Applying Team and Individual Performance Evaluation Metrics to Canadian Basketball
+# Title: Beyond the Boxscore: Applying Team and Individual Performance Evaluation Metrics to Canadian Basketball
 
 # Abstract
 The increased usage of statistical tools and methodologies in basketball has led to
