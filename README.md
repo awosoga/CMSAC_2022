@@ -134,11 +134,11 @@ as the set $X = {X_m,m ∈ 0, 1, 2, . . .M}$, where $X_0 ≡ 1$ to provide the t
 (constant) term. The general form of a multiple regression model is then defined as
 $$Y = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M + ϵ$$
 such that
-$$ E(Y |X_1, . . . ,X_M) = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M$$
+$$E(Y |X_1, . . . ,X_M) = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M$$
 
 Multiple regression model assumptions [19] must hold so that the parameters $β_0, β_1, . . . , β_M$ of the model can be estimated using Ordinary Least Squares Estimators. Ordinary least squares
 estimators minimize the sum of squared errors for each parameter, represented as
-$$ S(β_m) = \sum_{i=1}^{N} (y_i − E(y_i))^2 = \sum_{i=1}^{N} (y_i − β_0 − β_1x_{i1} − . . . − β_Mx_{iM})^2$$
+$$S(β_m) = \sum_{i=1}^{N} (y_i − E(y_i))^2 = \sum_{i=1}^{N} (y_i − β_0 − β_1x_{i1} − . . . − β_Mx_{iM})^2$$
 
 With these assumptions satisfied, this process will result in the estimators $β_m$ being the
 best linear unbiased estimators of the parameters. If the error term of the model is normally
@@ -146,7 +146,7 @@ distributed, then the least-squares estimators and the dependent variable yi for
 will also be normally distributed. The coefficient of determination, more commonly referred
 to as a model’s $R^2$ value, will be used in the following discussions to demonstrate how well the
 four factors predict team success in a season. Adjusted $R^2$ ($\overline{R}^2$) is an alternative measure of
-goodness-of-fit that accounts for some deficiencies present within the basic R^2 construct and
+goodness-of-fit that accounts for some deficiencies present within the basic $R^2$ construct and
 penalizes the inclusion of variables that do not add value to a model’s predictive ability.
 
 # 2.2 Model Specification
@@ -161,7 +161,7 @@ linear in nature, there is no guard against expected values outside the realm of
 as values over 100% or negative percentages. Due to its propreitary nature it is unclear whether
 Oliver’s model included an intercept term or not, and the terms’ effects are worth considering.
 The inclusion of a constant term often has an inconsequential interpretation, but excluding it
-could have significant ramifications on a model’s R2 and normality assumptions. Therefore,
+could have significant ramifications on a model’s $R^2$ and normality assumptions. Therefore,
 models with and without the constant term will be generated in the following manner and
 compared during analysis:
 
@@ -182,7 +182,7 @@ which has a p-value of 0.012.
 
 <img width="581" alt="Screen Shot 2022-08-23 at 11 20 35 AM" src="https://user-images.githubusercontent.com/111665282/186223941-04a8a08c-2eff-4249-a389-88e09e1884c1.png">
 
-In M1, the adjusted R2 of 0.868 means that the explanatory variables account for nearly 87%
+In M1, the adjusted $R^2$ of 0.868 means that the explanatory variables account for nearly 87%
 of the variation in the response variable (win percentage) of the model. This is extremely high
 and comparable with results from NBA datasets [21][22], providing strong evidence in defence
 of the factors’ relationship to winning. The minuscule difference between the original and
@@ -212,8 +212,8 @@ and 0.33, respectively), so any uncertainties about M2’s legitimacy can be qui
 <img width="1070" alt="Screen Shot 2022-08-23 at 11 22 16 AM" src="https://user-images.githubusercontent.com/111665282/186224301-fddd2277-fc18-4d82-a7ff-cda1c7b4c3f2.png">
 
 The women’s regression output W1 was similar to the men’s model, with intuitively correct
-coefficients and an excellent R2 value of 0.904. W2 exhibits a comparable offensive emphasis to
-M2 when estimating the factor coefficients and experiences a large increase in R2 with almost
+coefficients and an excellent $R^2$ value of 0.904. W2 exhibits a comparable offensive emphasis to
+M2 when estimating the factor coefficients and experiences a large increase in $R^2$ with almost
 zero penalization from the dependent variables. The ability to explain nearly 98% of the
 model’s variation is substantial and further proves that the four factors are transferable across
 multiple levels of basketball. Apart from eFG%, which displays a considerable difference in
@@ -224,8 +224,8 @@ models is similar.
 
 # 2.4 Predictive Ability
 The models used the games played during the 2021-22 season to test their predictive abilities
-and were compared in Table 2 using their R2, root-mean-square error (RMSE), and residual
-square error (RSE). Even though the models without intercepts had superior R2 values to those
+and were compared in Table 2 using their $R^2$, root-mean-square error (RMSE), and residual
+square error (RSE). Even though the models without intercepts had superior $R^2$ values to those
 with them in the regression output with the training set, they were very similar in predicting
 win percentage on the test data set. The men’s and women’s models produced nearly identical
 results in explaining the variation of win percentage in the test set, but the RSEs of the women’s
@@ -398,7 +398,7 @@ team and individual performance. It has been demonstrated that these analytical 
 maintain excellent functionality when applied to data from such leagues, with models utilizing
 the four factors alone explaining up to 98% of a team’s variation in win percentage for U
 SPORTS men’s and women’s teams. Expected win percentage predictions perform extremely
-well, with low error rates and R2 values near or above 87% for the 2021-2022 U SPORTS
+well, with low error rates and $R^2$ values near or above 87% for the 2021-2022 U SPORTS
 regular season. Established individual player metrics such as Box Plus Minus, Value Over
 Replacement Player, and Player Efficiency Rating were applied to CEBL players to illustrate
 oversights in traditional player valuations and provide observers with a better ranking system.
