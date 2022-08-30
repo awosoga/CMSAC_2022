@@ -190,10 +190,7 @@ straightforward interpretation. For example, a 1 percent change in eFG% is expec
 a team’s win percentage by 2.333 percent, and a team that reduces its TOV% by 1 percent is
 expected to enjoy a 1.962 percent increase in win percentage. $M_2$ omits the constant term and
 consequently produces some interesting results. To start, the coefficient of determination in 
-$M_2$ experiences a substantial increase to 0.974, nearly 11 points greater than that of $M_1$. Another
-
-<img width="317" alt="Screen Shot 2022-08-23 at 11 21 20 AM" src="https://user-images.githubusercontent.com/111665282/186224092-597c4b22-da1a-4955-8448-649069b6fa76.png">
-
+$M_2$ experiences a substantial increase to 0.974, nearly 11 points greater than that of $M_1$. Another 
 observation from comparing the two models is the defensive emphasis of $M_1$ compared to the
 more offense-heavy focus given to the coefficients of $M_2$. The values of eFG% and oppeFG%
 are seemingly flipped between the models, and rebounding also experiences a similar switch
@@ -207,7 +204,7 @@ in its distribution, with a mean of 0.000555. Normality tests such as that of Sh
 Kolmogorov-Smirnov, and Anderson-Darling all report p-values greater than 0.05 (0.084, 0.85,
 and 0.33, respectively), so any uncertainties about $M_2$’s legitimacy can be quickly put to rest.
 
-<img width="1070" alt="Screen Shot 2022-08-23 at 11 22 16 AM" src="https://user-images.githubusercontent.com/111665282/186224301-fddd2277-fc18-4d82-a7ff-cda1c7b4c3f2.png">
+<img width="676" alt="Screen Shot 2022-08-30 at 3 07 54 PM" src="https://user-images.githubusercontent.com/111665282/187543452-9ccf4f8e-6226-48d1-a0ba-c426d4fd5fbf.png">
 
 The women’s regression output $W_1$ was similar to the men’s model, with intuitively correct
 coefficients and an excellent $R^2$ value of 0.904. $W_2$ exhibits a comparable offensive emphasis to
@@ -221,6 +218,9 @@ different between men and women (48% to 41.3%), the coefficient on these terms f
 models is similar.
 
 # 2.4 Predictive Ability
+
+<img width="317" alt="Screen Shot 2022-08-23 at 11 21 20 AM" src="https://user-images.githubusercontent.com/111665282/186224092-597c4b22-da1a-4955-8448-649069b6fa76.png">
+
 The models used the games played during the 2021-22 season to test their predictive abilities
 and were compared in Table 2 using their $R^2$, root-mean-square error (RMSE), and residual
 square error (RSE). Even though the models without intercepts had superior $R^2$ values to those
@@ -427,8 +427,7 @@ The data and code necessary to reproduce the analyses performed in this paper ar
 from GitHub at https://github.com/awosoga/CMSAC_2022.
 
 # References
-[1] David Awosoga. Canadian basketball analytics. https://
-canadianbasketballanalytics.carrd.co. Accessed: 2022-08-12.
+[1] David Awosoga. Canadian basketball analytics. https://canadianbasketballanalytics.carrd.co. Accessed: 2022-08-12.
 
 [2] Jeremias Engelmann. Possession-based player performance analysis in basketball (adjusted
 +/- and related concepts). 2016.
@@ -436,19 +435,15 @@ canadianbasketballanalytics.carrd.co. Accessed: 2022-08-12.
 [3] Justin Kubatko, Dean Oliver, Kevin Pelton, and Dan Rosenbaum. A starting point for
 analyzing basketball statistics. Journal of Quantitative Analysis in Sports, 3:1–1, 02 2007.
 
-[4] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted plus-minus. https://
-fansided.com/2014/09/25/glossary-plus-minus-adjusted-plus-minus/. Accessed:
+[4] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted plus-minus. https://fansided.com/2014/09/25/glossary-plus-minus-adjusted-plusminus/. Accessed:
 2022-02-26.
 
-[5] Daniel Myers. About box plus/minus (bpm). https://www.basketball-reference.
-com/about/bpm2.html. Accessed: 2022-02-21.
+[5] Daniel Myers. About box plus/minus (bpm). https://www.basketball-reference.com/about/bpm2.html. Accessed: 2022-02-21.
 
-[6] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction. https://www.
-bball-index.com/lebron-introduction/. Accessed: 2022-03-01.
+[6] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction. https://www.bball-index.com/lebron-introduction/. Accessed: 2022-03-01.
 
 [7] Nate Silver. Introducting raptor, our new metric for
-the modern nba. https://fivethirtyeight.com/features/
-introducing-raptor-our-new-metric-for-the-modern-nba/. Accessed: 2022-03-01.
+the modern nba. https://fivethirtyeight.com/features/introducing-raptor-our-new-metric-for-the-modern-nba/. Accessed: 2022-03-01.
 
 [8] Petar Vračar, Erik Štrumbelj, and Igor Kononenko. Modeling basketball play-by-play
 data. Expert Systems with Applications, 44:58–66, 2016.
@@ -466,14 +461,11 @@ sports: a comprehensive review. Journal of Quantitative Analysis in Sports, 15(4
 
 [12] U SPORTS. U sports. https://usports.ca/en. Accessed: 2022-02-21.
 
-[13] PrestoSports. Prestosports | all-in-one sports technology platform. https://www.
-prestosports.com/landing/index. Accessed: 2022-02-21.
+[13] PrestoSports. Prestosports | all-in-one sports technology platform. https://www.prestosports.com/landing/index. Accessed: 2022-02-21.
 
-[14] Martin Timmerman. U sports hoops, university baskbetball in canada. https://
-usportshoops.ca. Accessed: 2022-02-21.
+[14] Martin Timmerman. U sports hoops, university baskbetball in canada. https://usportshoops.ca. Accessed: 2022-02-21.
 
-[15] RealGM. Canadian elite basketball league. https://basketball.realgm.com/
-international/league/128/Canadian-Elite-Basketball-League/. Accessed: 2022-
+[15] RealGM. Canadian elite basketball league. https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/. Accessed: 2022-
 08-01.
 
 [16] R Core Team. R: A Language and Environment for Statistical Computing. R Foundation
@@ -506,14 +498,10 @@ of Quantitative Analysis in Sports, 8, 01 2012.
 [25] J. Hollinger. Pro Basketball Forecast. PRO BASKETBALL PROSPECTUS. Potomac
 Books, Incorporated, 2005.
 
-[26] Basketball Reference. Calculating per. https://www.basketball-reference.com/
-about/per.html. Accessed: 2022-08-12.
+[26] Basketball Reference. Calculating per. https://www.basketball-reference.com/about/per.html. Accessed: 2022-08-12.
 
-[27] Daniel Myers. Box plus/minus 2.0 example calculations. https://docs.google.
-com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=
-307166562. Accessed: 2022-08-15.
+[27] Daniel Myers. Box plus/minus 2.0 example calculations. https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562. Accessed: 2022-08-15.
 
 [28] Bryan Kalbrosky. What is the best advanced statistic for basketball?
-nba executives weigh in. https://hoopshype.com/lists/
-advanced-stats-nba-real-plus-minus-rapm-win-shares-analytics/. Accessed:
+nba executives weigh in. https://hoopshype.com/lists/advanced-stats-nba-real-plus-minus-rapm-win-shares-analytics/. Accessed:
 2022-03-01.
