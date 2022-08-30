@@ -147,7 +147,7 @@ estimators minimize the sum of squared errors for each parameter, represented as
 $$ S(β_m) = \sum_{i=1}^{N} (y_i − E(y_i))^2 = \sum_{i=1}^{N} (y_i − β_0 − β_1x_{i1} − . . . − β_Mx_{iM})^2$$
 With these assumptions satisfied, this process will result in the estimators $β_m$ being the
 best linear unbiased estimators of the parameters. If the error term of the model is normally
-distributed, then the least-squares estimators and the dependent variable yi for each observation
+distributed, then the least-squares estimators and the dependent variable $y_i$ for each observation
 will also be normally distributed. The coefficient of determination, more commonly referred
 to as a model’s R^2^ value, will be used in the following discussions to demonstrate how well the
 four factors predict team success in a season. Adjusted R^2^ ($\overline{R}^2$) is an alternative measure of
