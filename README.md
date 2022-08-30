@@ -98,22 +98,17 @@ be expressed in terms of percentages they are comparable across seasons and even
 basketball with some slight modifications and estimations.
 
 * Effective Field Goal Percentage (eFG%) calculates how efficiently a team scores,
-adjusting for the extra value gained from a 3-point shot versus a 2-point shot. eFG% =
-FG+0.5(3P)
-FGA
+adjusting for the extra value gained from a 3-point shot versus a 2-point shot. $eFG = FG+0.5(3P)/FGA$
 * Turnover Percentage (TOV%) measures the percentage of a team’s possessions that
 end in a turnover. Since possessions are not officially tracked in U SPORTS boxscores,
-estimates with good empirical accuracy are used in their place: POSS ≈ FGA+0.44×
-FTA − OFF + TO [3]. TOV % = TO
-POSS
+estimates with good empirical accuracy are used in their place: $POSS ≈ FGA+0.44×FTA − OFF + TO$ [3]. $TOV = TO /POSS$
+
 * Offensive Rebound Percentage (ORB%) is defined as the percentage of offensive
 rebounds that a team obtains out of total available rebounds from missed field goal
-attempts and free throws. ORB% = OFF
-TOT
+attempts and free throws. $ORB = OFF / TOT$
 * Free Throw Factor (FTF%), the percentage of “free" points a team gets per field goal
 attempt. It underscores the conventional wisdom that the ability to get to the line does
-not have much bearing if a team is not proficient at making free throws. FTF% = FT
-FGA
+not have much bearing if a team is not proficient at making free throws. $FTF = FT/FGA$
 
 The rest of the paper is organized in the following manner. The Four Factors of Basketball
 will be used in Section 2 on U SPORTS team data to model a team’s expected win percentage,
@@ -131,25 +126,26 @@ align with the significance of the factor in question. By adhering to a regiment
 model based on the four factors and their relationship to winning, teams can manipulate their
 factor scores to overcome talent constraints and optimize their expected win percentage.
 
-#2.1 Methodology
+# 2.1 Methodology
 A multiple linear regression is a common empirical research tool that attempts to explain a
-measurable outcome (the dependent variable, Yi) using well-understood determinants (independent
-variables), while accounting for random error ϵ. Independent variables are represented
-as the set X = {Xm,m ∈ 0, 1, 2, . . .M}, where X0 ≡ 1 to provide the traditional intercept
+measurable outcome (the dependent variable, $Y_i$) using well-understood determinants (independent
+variables), while accounting for random error $ϵ$. Independent variables are represented
+as the set $X = {X_m,m ∈ 0, 1, 2, . . .M}$, where $X_0 ≡ 1$ to provide the traditional intercept
 (constant) term. The general form of a multiple regression model is then defined as
+$$Y = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M + ϵ$$
+such that
+$$ E(Y |X_1, . . . ,X_M) = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M$$
 
-<img width="786" alt="Screen Shot 2022-08-23 at 11 16 41 AM" src="https://user-images.githubusercontent.com/111665282/186223208-3f1a084a-ecae-44ba-8be9-4bbfad409e99.png">
-
-Multiple regression model assumptions [19] must hold so that the parameters β0, β1, . . . , βM of the model can be estimated using Ordinary Least Squares Estimators. Ordinary least squares
+Multiple regression model assumptions [19] must hold so that the parameters $β_0, β_1, . . . , β_M$ of the model can be estimated using Ordinary Least Squares Estimators. Ordinary least squares
 estimators minimize the sum of squared errors for each parameter, represented as
-<img width="536" alt="Screen Shot 2022-08-23 at 11 18 19 AM" src="https://user-images.githubusercontent.com/111665282/186223496-77de867d-8556-4b99-9ad2-6d8ed590e5e4.png">
+$$ S(β_m) = \sum_{i=1}^{N} (y_i − E(y_i))^2 = \sum_{i=1}^{N} (y_i − β_0 − β_1x_{i1} − . . . − β_Mx_{iM})^2$$
 
-With these assumptions satisfied, this process will result in the estimators βˆm being the
+With these assumptions satisfied, this process will result in the estimators $β_m$ being the
 best linear unbiased estimators of the parameters. If the error term of the model is normally
 distributed, then the least-squares estimators and the dependent variable yi for each observation
 will also be normally distributed. The coefficient of determination, more commonly referred
-to as a model’s R^2 value, will be used in the following discussions to demonstrate how well the
-four factors predict team success in a season. Adjusted R2 (R¯2) is an alternative measure of
+to as a model’s $R^2$ value, will be used in the following discussions to demonstrate how well the
+four factors predict team success in a season. Adjusted $R^2$ ($\overline{R}^2$) is an alternative measure of
 goodness-of-fit that accounts for some deficiencies present within the basic R^2 construct and
 penalizes the inclusion of variables that do not add value to a model’s predictive ability.
 
@@ -169,7 +165,11 @@ could have significant ramifications on a model’s R2 and normality assumptions
 models with and without the constant term will be generated in the following manner and
 compared during analysis:
 
-<img width="729" alt="Screen Shot 2022-08-23 at 11 19 53 AM" src="https://user-images.githubusercontent.com/111665282/186223796-3b6b0f15-93d1-4128-a252-d19146334039.png">
+$$ WinPecentage = β_0 + β_1eFG + β_2TOV + β_3ORB + β_4FTF
++ β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
+
+$$ WinPecentage =  β_1eFG + β_2TOV + β_3ORB + β_4FTF
++ β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
 
 # 2.3 Analysis
 Table 1 report the output of the regressions run from equations 1 (M1 and W1) and 2 (M2 and
