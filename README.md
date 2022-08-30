@@ -165,24 +165,22 @@ could have significant ramifications on a model’s $R^2$ and normality assumpti
 models with and without the constant term will be generated in the following manner and
 compared during analysis:
 
-$$ WinPecentage = β_0 + β_1eFG + β_2TOV + β_3ORB + β_4FTF
-+ β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
+$$WinPecentage = β_0 + β_1eFG + β_2TOV + β_3ORB + β_4FTF + β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
 
-$$ WinPecentage =  β_1eFG + β_2TOV + β_3ORB + β_4FTF
-+ β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
+$$WinPecentage =  β_1eFG + β_2TOV + β_3ORB + β_4FTF+ β_5oppeFG + β_6oppTOV + β_7oppORB + β_8oppFTF$$
 
 # 2.3 Analysis
-Table 1 report the output of the regressions run from equations 1 (M1 and W1) and 2 (M2 and
-W2), courtesy of the stargazer package from R [20]. The signs on each coefficient align with
+Table 1 report the output of the regressions run from equations 1 ($M_1$ and $W_1$) and 2 ($M_2$ and
+$W_2$), courtesy of the stargazer package from R [20]. The signs on each coefficient align with
 a basic understanding of the game of basketball: shooting, rebounding, and free throws will
 have a positive impact on a team’s success, while turnovers will have a negative effect. The
 opposite intuitively holds for the opposition and is reflected by the coefficients on the “opp"
-variables. Each coefficient is statistically significant at the 1% level except for oppFTF in M2,
+variables. Each coefficient is statistically significant at the 1% level except for oppFTF in $M_2$,
 which has a p-value of 0.012.
 
 <img width="581" alt="Screen Shot 2022-08-23 at 11 20 35 AM" src="https://user-images.githubusercontent.com/111665282/186223941-04a8a08c-2eff-4249-a389-88e09e1884c1.png">
 
-In M1, the adjusted $R^2$ of 0.868 means that the explanatory variables account for nearly 87%
+In $M_1$, the adjusted $R^2$ of 0.868 means that the explanatory variables account for nearly 87%
 of the variation in the response variable (win percentage) of the model. This is extremely high
 and comparable with results from NBA datasets [21][22], providing strong evidence in defence
 of the factors’ relationship to winning. The minuscule difference between the original and
@@ -190,34 +188,34 @@ adjusted goodness-of-fit values demonstrates how little penalty each added varia
 Since the factors and dependent variable can be expressed with percentages, they have a very
 straightforward interpretation. For example, a 1 percent change in eFG% is expected to change
 a team’s win percentage by 2.333 percent, and a team that reduces its TOV% by 1 percent is
-expected to enjoy a 1.962 percent increase in win percentage. M2 omits the constant term and
+expected to enjoy a 1.962 percent increase in win percentage. $M_2$ omits the constant term and
 consequently produces some interesting results. To start, the coefficient of determination in 
-M2 experiences a substantial increase to 0.974, nearly 11 points greater than that of M1. Another
+$M_2$ experiences a substantial increase to 0.974, nearly 11 points greater than that of $M_1$. Another
 
 <img width="317" alt="Screen Shot 2022-08-23 at 11 21 20 AM" src="https://user-images.githubusercontent.com/111665282/186224092-597c4b22-da1a-4955-8448-649069b6fa76.png">
 
-observation from comparing the two models is the defensive emphasis of M1 compared to the
-more offense-heavy focus given to the coefficients of M2. The values of eFG% and oppeFG%
+observation from comparing the two models is the defensive emphasis of $M_1$ compared to the
+more offense-heavy focus given to the coefficients of $M_2$. The values of eFG% and oppeFG%
 are seemingly flipped between the models, and rebounding also experiences a similar switch
 in coefficients on both sides of the ball, from 0.695 to 0.936 offensively and −0.97 to −0.596
 on defense. Some coefficients remain relatively unchanged, such as oppTOV (2.062 vs 2.022)
 and oppFTF (−0.544 vs −0.479). The intercept term β0 is incorporated to ensure that the
 mean of the residuals will be zero and protect the model against bias, the second assumption
 referenced in Section 2.1. However, Figure 2.3 shows two adjacent histograms comparing the
-residuals of the M1 and M2, and while they have slightly different shapes, M2 is still very normal
+residuals of the $M_1$ and $M_2$, and while they have slightly different shapes, $M_2$ is still very normal
 in its distribution, with a mean of 0.000555. Normality tests such as that of Shapiro-Wilk,
 Kolmogorov-Smirnov, and Anderson-Darling all report p-values greater than 0.05 (0.084, 0.85,
-and 0.33, respectively), so any uncertainties about M2’s legitimacy can be quickly put to rest.
+and 0.33, respectively), so any uncertainties about $M_2$’s legitimacy can be quickly put to rest.
 
 <img width="1070" alt="Screen Shot 2022-08-23 at 11 22 16 AM" src="https://user-images.githubusercontent.com/111665282/186224301-fddd2277-fc18-4d82-a7ff-cda1c7b4c3f2.png">
 
-The women’s regression output W1 was similar to the men’s model, with intuitively correct
-coefficients and an excellent $R^2$ value of 0.904. W2 exhibits a comparable offensive emphasis to
-M2 when estimating the factor coefficients and experiences a large increase in $R^2$ with almost
+The women’s regression output $W_1$ was similar to the men’s model, with intuitively correct
+coefficients and an excellent $R^2$ value of 0.904. $W_2$ exhibits a comparable offensive emphasis to
+$M_2$ when estimating the factor coefficients and experiences a large increase in $R^2$ with almost
 zero penalization from the dependent variables. The ability to explain nearly 98% of the
 model’s variation is substantial and further proves that the four factors are transferable across
 multiple levels of basketball. Apart from eFG%, which displays a considerable difference in
-offense and defense between W1 and W2, the other factor coefficients are relatively unchanged.
+offense and defense between $W_1$ and $W_2$, the other factor coefficients are relatively unchanged.
 It is interesting to note that even though the average eFG% in U SPORTS basketball is vastly
 different between men and women (48% to 41.3%), the coefficient on these terms for both
 models is similar.
@@ -229,8 +227,8 @@ square error (RSE). Even though the models without intercepts had superior $R^2$
 with them in the regression output with the training set, they were very similar in predicting
 win percentage on the test data set. The men’s and women’s models produced nearly identical
 results in explaining the variation of win percentage in the test set, but the RSEs of the women’s
-models were lower than M1 and M2, with W1 being the only model to dip under 17%. Figure
-1 compares the expected win percentage from M1 (horizontal axis) and actual win percentage
+models were lower than $M_1$ and $M_2$, with $W_1$ being the only model to dip under 17%. Figure
+1 compares the expected win percentage from $M_1$ (horizontal axis) and actual win percentage
 (vertical axis) for the 48 men’s basketball teams during the 2021-2022 season. Within this
 figure lie various applications of the four factors, two of which are explored in the following
 case studies.
