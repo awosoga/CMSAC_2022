@@ -1,7 +1,7 @@
 # CMSAC_2022
 Supplementary Material for Carnegie Mellon Sports Analytics Conference Paper
 
-For Markdown Script, remember to set proper working directory!
+For RMarkdown Script, please remember to set proper working directory to rerun the code!
 
 # Title: Beyond the Boxscore: Applying Team and Individual Performance Evaluation Metrics to Canadian Basketball
 
