@@ -145,7 +145,7 @@ best linear unbiased estimators of the parameters. If the error term of the mode
 distributed, then the least-squares estimators and the dependent variable yi for each observation
 will also be normally distributed. The coefficient of determination, more commonly referred
 to as a model’s $R^2$ value, will be used in the following discussions to demonstrate how well the
-four factors predict team success in a season. Adjusted $R^2$ ($\overline{R}^2$) is an alternative measure of
+four factors predict team success in a season. Adjusted $R^2$ is an alternative measure of
 goodness-of-fit that accounts for some deficiencies present within the basic $R^2$ construct and
 penalizes the inclusion of variables that do not add value to a model’s predictive ability.
 
