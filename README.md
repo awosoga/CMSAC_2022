@@ -247,7 +247,7 @@ from the x-axis shown in Figure 1. Coming as little surprise to anyone familiar 
 SPORTS men’s basketball over the past decade, the best statistical team during the 2021-
 2022 season were the eventual national champion Carleton Ravens. They were the cream of
 the crop amongst a deep pool of talented teams, with an expected win percentage nearly 20
-points greater than the next best school, crusing to a 14-0 regular season. Statistically, Carleton
+points greater than the next best school, cruising to a 14-0 regular season. Statistically, Carleton
 boasted the 2nd best eFG%, 2nd best ORB%, and the 2nd best opponent ORB% in U
 SPORTS, at 53.7%, 38.2%, and 20.9%, respectively. However, their defensive performance is
 what warranted their infeasible expected winning percentage of 111%. Their 37.8% opponent
