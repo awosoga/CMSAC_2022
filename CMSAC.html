@@ -406,23 +406,23 @@ but gave way to untrustworthy sample sizes and did not properly account
 for the lower-percentage but increased value of the 3-point shot. As new
 metrics were introduced to try and combat these deficiencies, ambiguity
 arose about their context and employment and little headway in
-basketball analytics was made until the late 1990s. It was then that
+basketball analytics was made until the late 1990s[2]. It was then that
 <em>regression-based statistics</em> were introduced to compare the
 predictive power and standard error of models and per-game statistics
 were succeeded by the more stable and informative <em>per-minute
 statistics</em>. <em>Possession-based</em> metrics introduced a new wave
 of analytics that provided a strong correlation with wins on a team
-level and could be broken down for individual players as well [2]. Since
+level and could be broken down for individual players as well [3]. Since
 teams alternate possessions in a game, playing basketball was abstracted
 to an optimization problem of how to maximize a team’s per-possession
-efficiency [3]. Current leaders in advanced NBA analytics involve
-plus-minus statistics [4], such as Box Plus-Minus (BPM) [5], Estimated
+efficiency [4]. Current leaders in advanced NBA analytics involve
+plus-minus statistics [5], such as Box Plus-Minus (BPM) [6], Estimated
 Plus-Minus (EPM), and Daily Plus-Minus (DPM). Other metrics with more
 exotic acronyms have experienced increased popularity in recent years,
 including LEBRON, a player role and luck-adjusted metric from BBall
-Index [6], and RAPTOR, the Robust Algorithm (using) Player Tracking
+Index [7], and RAPTOR, the Robust Algorithm (using) Player Tracking
 (and) On/Off Ratings developed by Nate Silver of FiveThirtyEight
-[7].</p>
+[8].</p>
 </div>
 <div id="data-collection-and-structure" class="section level1">
 <h1>1.1 Data Collection and Structure</h1>
@@ -438,37 +438,37 @@ report that gives the sequential listing of events that determine a
 game’s outcome, chronicling the score and players on the court at the
 time of any event occurrence. They contain useful information for
 predicting the outcome of a particular matchup and simulating the
-progression of events that can lead to such an outcome [8]. The
+progression of events that can lead to such an outcome [9]. The
 introduction of spatio-temporal data via player tracking and wearable
 technologies in the 2010s has revolutionized basketball analytics, as
 cameras are now able to determine the locations of all the players on
-the court, as well as the (x,y,z) coordinates of the ball [9] with
+the court, as well as the (x,y,z) coordinates of the ball [10] with
 incredible accuracy and precision. This has given researchers the
 ability to determine the relationship between shot selection and
 opponent location, as well as provide improved analysis of individual
-defensive performance [10] - something historically undervalued by
+defensive performance [11] - something historically undervalued by
 boxscore and play-by-play-based statistics. Bayesian regression models
 and Markov Chains have been used to model player career projections and
-team evaluations, leading to the creation of new metrics [11].</p>
+team evaluations, leading to the creation of new metrics [12].</p>
 <p>The leagues under consideration are University Sports (<strong>U
 SPORTS</strong>), the governing body and leader of university sport in
-Canada [12], and the Canadian Elite Basketball League
+Canada [13], and the Canadian Elite Basketball League
 (<strong>CEBL</strong>), the top domestic league in Canada. U SPORTS
 player and team data is taken from ‘Coach’s View’ Season Summary
 Statistics that are publicly available for each basketball team by
-PrestoSports [13]. Information about player position, which is
+PrestoSports [14]. Information about player position, which is
 incorporated in individual performance evaluation metrics, is taken from
-usportshoops [14]. Statistics from the 2015-2016 through 2019-2020
+usportshoops [15]. Statistics from the 2015-2016 through 2019-2020
 seasons were used as the training set for created models, and the
 2021-2022 season was used as the test set for predictions (the 2020-2021
 season was cancelled due to the covid-19 pandemic). The CEBL played its
 inaugural season in 2019 and is comprised of talent from leagues such as
 the NBA G-League, USPORTS, the NCAA, and multiple high-level
 international leagues. Season summary data and roster information for
-the CEBL is taken from RealGM [15]. Since neither league uses player
+the CEBL is taken from RealGM [16]. Since neither league uses player
 tracking and play-by-play data can be difficult to parse efficiently,
 the season summaries were taken exclusively from game boxscores. The
-data was collected using web-scraping in the R [16] programming
+data was collected using web-scraping in the R [17] programming
 language, and scripts were written to calculate advanced statistics from
 these basic statistics and output them in easy-to-read Microsoft Excel
 tables.</p>
@@ -477,7 +477,7 @@ tables.</p>
 <h1>1.2 Team Evaluation Using the Four Factors of Basketball</h1>
 <p>The Four Factors of Basketball were introduced by statistician and
 basketball analytics pioneer Dean Oliver in his 2003 book Basketball on
-Paper [17]. They are based on the four main events that affect an
+Paper [18]. They are based on the four main events that affect an
 offensive possession in basketball - a field goal attempt, a turnover,
 an offensive rebound, and a foul. While other more obscure events can
 affect or terminate a possession, the four factors capture the
@@ -495,7 +495,7 @@ FG+0.5(3P)/FGA\)</span></li>
 team’s possessions that end in a turnover. Since possessions are not
 officially tracked in U SPORTS boxscores, estimates with good empirical
 accuracy are used in their place: <span class="math inline">\(POSS ≈
-FGA+0.44×FTA − OFF + TO\)</span> [3]. <span class="math inline">\(TOV\%
+FGA+0.44×FTA − OFF + TO\)</span> [4]. <span class="math inline">\(TOV\%
 = TO /POSS\)</span></li>
 <li><em>Offensive Rebound Percentage (ORB%)</em> is defined as the
 percentage of offensive rebounds that a team obtains out of total
@@ -517,7 +517,7 @@ results, which are summarized in Section 4.</p>
 <div id="expected-win-percentage" class="section level1">
 <h1>2 Expected Win Percentage</h1>
 <p>The expected wins model modifies baseball’s “Expected Runs” metric
-[18] by regressing a team’s wins on the four factors, a useful
+[19] by regressing a team’s wins on the four factors, a useful
 application of which is the ability to determine the “importance” of
 each factor. Once the factors have been ranked, a strategic framework
 can be devised within a team’s operations to properly allocate time to
@@ -538,7 +538,7 @@ provide the traditional intercept (constant) term. The general form of a
 multiple regression model is then defined as <span class="math display">\[Y = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M +
 ϵ\]</span> such that <span class="math display">\[ E(Y |X_1, . . . ,X_M)
 = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M\]</span> Multiple regression
-model assumptions [19] must hold so that the parameters <span class="math inline">\(β_0, β_1, . . . , β_M\)</span> of the model can be
+model assumptions [20] must hold so that the parameters <span class="math inline">\(β_0, β_1, . . . , β_M\)</span> of the model can be
 estimated using Ordinary Least Squares Estimators. Ordinary least
 squares estimators minimize the sum of squared errors for each
 parameter, represented as</p>
@@ -590,7 +590,7 @@ analysis:</p>
 <p>Table 1 report the output of the regressions run from equations 1
 (<em>M<sub>1<sub></em> and <em>W<sub>1<sub></em>) and 2
 (<em>M<sub>2<sub></em> and <em>W<sub>2<sub></em>), courtesy of the
-stargazer package from R [20]. The signs on each coefficient align with
+stargazer package from R [21]. The signs on each coefficient align with
 a basic understanding of the game of basketball: shooting, rebounding,
 and free throws will have a positive impact on a team’s success, while
 turnovers will have a negative effect. The opposite intuitively holds
@@ -728,7 +728,7 @@ summary(M1)</code></pre>
 <p>In <em>M<sub>1<sub></em>, the adjusted R<sup>2</sup> of 0.868 means
 that the explanatory variables account for nearly 87% of the variation
 in the response variable (win percentage) of the model. This is
-extremely high and comparable with results from NBA datasets [21][22],
+extremely high and comparable with results from NBA datasets [22][23],
 providing strong evidence in defence of the factors’ relationship to
 winning. The minuscule difference between the original and adjusted
 goodness-of-fit values demonstrates how little penalty each added
@@ -913,7 +913,7 @@ RSEQ division. The Redbirds’ 50% difference between their win percentage
 and that of the second place team (Concordia, 6-6) was the largest such
 gap in any division in U SPORTS. Additionally, their division had the
 smallest divisional parity index as per win percentage standard
-deviation ratios [23], an indicator of the overall closeness of talent
+deviation ratios [24], an indicator of the overall closeness of talent
 within that division. McGill achieved success with an elite defensive
 scheme, ranking 5th overall in opponent FTF%, 6th in opponent TOV%, and
 11th in opponent eFG%. This staunch defense won the Redbirds multiple
@@ -944,7 +944,7 @@ a top-down approach. This category takes possession-related statistics
 such as the four factors and points per possession (PPP) and
 disaggregates them so that player statlines can be used to calculate
 individual PPP, eFG%, TOV%, and FTF%. This technique used in paid
-applications such as Synergy Sports Technology [24] and provides insight
+applications such as Synergy Sports Technology [25] and provides insight
 into identifying the relative strengths (and weaknesses) of each player
 to properly contextualize their valuation. Additionally, play-by-play
 and spatial data make it possible to determine a player’s ORB%, which
@@ -955,8 +955,8 @@ conglomerate them into one number to determine their value. Catch-all
 metrics are extremely useful for overall comparisons of players but are
 a hotly contested subject area in NBA circles due to the relative
 secrecy of their formulation. However, some of these calculations have
-been publicized, and three of them; Player Efficiency Rating (PER) [25],
-Box-Plus Minus (BPM) [5], and Value over Replacement Player (VORP) [5],
+been publicized, and three of them; Player Efficiency Rating (PER) [26],
+Box-Plus Minus (BPM) [6], and Value over Replacement Player (VORP) [6],
 will be discussed in greater depth.</p>
 </div>
 <div id="catch-all-statistics" class="section level1">
@@ -966,7 +966,7 @@ first all-in-one statistic to attempt to quantify a player’s value. It
 takes a players’ boxscore contributions: field goals, free throws, 3’s,
 assists, rebounds, blocks and steals, turnovers, missed shots, and
 fouls, adding the positive contributions and penalizing the negative
-ones using detailed formulas [26]. It adjusts for per-minute
+ones using detailed formulas [27]. It adjusts for per-minute
 productivity and team pace, as well as the league averages in all the
 statistical categories, and is normalized such that a PER of 15 is
 considered league average. It is biased towards offensive output since
@@ -980,7 +980,7 @@ offensively biased). BPM estimates a player’s contribution in points
 above league average per 100 possessions played. It is produced using
 similar boxscore-based statistics as PER, but also includes a player’s
 position, offensive role, and their teams’ overall performance in the
-even more comprehensive calculations [27]. BPM is set such that league
+even more comprehensive calculations [28]. BPM is set such that league
 average is 0.0 (0 points above or below average). For example, a BPM of
 5.0 means that a player’s team is 5 points per 100 possessions better
 with them on the floor than with average production from another player.
@@ -991,7 +991,7 @@ provide (someone with a BPM of -2.0 by definition), by including the
 number of possessions that a player has featured in and the fraction of
 their teams’ games that they have played. VORP removes any biases in
 pace and is considered by many as one of the better measures of actual
-value contributed to a team [28].</p>
+value contributed to a team [29].</p>
 <table>
 <caption>Advanced Player Metrics for the Top 10 CEBL Players During the
 2022 Season, per VORP</caption>
@@ -1224,72 +1224,73 @@ this paper are available from GitHub at <a href="https://github.com/awosoga/CMSA
 <h1>References</h1>
 <p>[1] David Awosoga. Canadian basketball analytics. <a href="https://canadianbasketballanalytics.carrd.co" class="uri">https://canadianbasketballanalytics.carrd.co</a>. Accessed:
 2022-08-12.</p>
-<p>[2] Jeremias Engelmann. Possession-based player performance analysis
+<p>[2] Milos Mudric. How the nba data and analytics revolution has changed the game. <a href ="https://www.smartdatacollective.com/how-nba-data-analytics-revolution-has-changed-game/" class = "uri">https://www.smartdatacollective.com/how-nba-data-analytics-revolution-has-changed-game/<a>. Accessed: 2022-08-19.
+<p>[3] Jeremias Engelmann. Possession-based player performance analysis
 in basketball (adjusted +/- and related concepts). 2016.</p>
-<p>[3] Justin Kubatko, Dean Oliver, Kevin Pelton, and Dan Rosenbaum. A
+<p>[4] Justin Kubatko, Dean Oliver, Kevin Pelton, and Dan Rosenbaum. A
 starting point for analyzing basketball statistics. Journal of
 Quantitative Analysis in Sports, 3:1–1, 02 2007.</p>
-<p>[4] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted
+<p>[5] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted
 plus-minus. <a href="https://fansided.com/2014/09/25/glossary-plus-minus-adjusted-plus-minus/" class="uri">https://fansided.com/2014/09/25/glossary-plus-minus-adjusted-plus-minus/</a>.
 Accessed: 2022-02-26.</p>
-<p>[5] Daniel Myers. About box plus/minus (bpm). <a href="https://www.basketball-reference.com/about/bpm2.html" class="uri">https://www.basketball-reference.com/about/bpm2.html</a>.
+<p>[6] Daniel Myers. About box plus/minus (bpm). <a href="https://www.basketball-reference.com/about/bpm2.html" class="uri">https://www.basketball-reference.com/about/bpm2.html</a>.
 Accessed: 2022-02-21.</p>
-<p>[6] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction.
+<p>[7] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction.
 <a href="https://www.bball-index.com/lebron-introduction/" class="uri">https://www.bball-index.com/lebron-introduction/</a>.
 Accessed: 2022-03-01.</p>
-<p>[7] Nate Silver. Introducting raptor, our new metric for the modern
+<p>[8] Nate Silver. Introducting raptor, our new metric for the modern
 nba. <a href="https://fivethirtyeight.com/features/introducing-raptor-our-new-metric-for-the-modern-nba/" class="uri">https://fivethirtyeight.com/features/introducing-raptor-our-new-metric-for-the-modern-nba/</a>.
 Accessed: 2022-03-01.</p>
-<p>[8] Petar Vračar, Erik Štrumbelj, and Igor Kononenko. Modeling
+<p>[9] Petar Vračar, Erik Štrumbelj, and Igor Kononenko. Modeling
 basketball play-by-play data. Expert Systems with Applications,
 44:58–66, 2016.</p>
-<p>[9] Zachary Terner and Alexander Franks. Modeling player and team
+<p>[10] Zachary Terner and Alexander Franks. Modeling player and team
 performance in basketball, 2020.</p>
-<p>[10] Alexander Franks, Andrew Miller, Luke Bornn, and Kirk
+<p>[11] Alexander Franks, Andrew Miller, Luke Bornn, and Kirk
 Goldsberry. Characterizing the spatial structure of defensive skill in
 professional basketball. The Annals of Applied Statistics, 9, 05
 2014.</p>
-<p>[11] Edgar Santos Fernandez, Paul Wu, and Kerrie Mengersen. Bayesian
+<p>[12] Edgar Santos Fernandez, Paul Wu, and Kerrie Mengersen. Bayesian
 statistics meets sports: a comprehensive review. Journal of Quantitative
 Analysis in Sports, 15(4):289– 312, 2019.</p>
-<p>[12] U SPORTS. U sports. <a href="https://usports.ca/en" class="uri">https://usports.ca/en</a>. Accessed: 2022-02-21.</p>
-<p>[13] PrestoSports. Prestosports | all-in-one sports technology
+<p>[13] U SPORTS. U sports. <a href="https://usports.ca/en" class="uri">https://usports.ca/en</a>. Accessed: 2022-02-21.</p>
+<p>[14] PrestoSports. Prestosports | all-in-one sports technology
 platform. <a href="https://www.prestosports.com/landing/index" class="uri">https://www.prestosports.com/landing/index</a>. Accessed:
 2022-02-21.</p>
-<p>[14] Martin Timmerman. U sports hoops, university baskbetball in
+<p>[15] Martin Timmerman. U sports hoops, university baskbetball in
 canada. <a href="https://usportshoops.ca" class="uri">https://usportshoops.ca</a>. Accessed: 2022-02-21.</p>
-<p>[15] RealGM. Canadian elite basketball league. <a href="https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/" class="uri">https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/</a>.
+<p>[16] RealGM. Canadian elite basketball league. <a href="https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/" class="uri">https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/</a>.
 Accessed: 2022- 08-01.</p>
-<p>[16] R Core Team. R: A Language and Environment for Statistical
+<p>[17] R Core Team. R: A Language and Environment for Statistical
 Computing. R Foundation for Statistical Computing, Vienna, Austria,
 2022.</p>
-<p>[17] Dean Oliver. Basketball on paper : rules and tools for
+<p>[18] Dean Oliver. Basketball on paper : rules and tools for
 performance analysis / Dean Oliver. Brassey’s, Inc., Washington, D.C,
 1st ed. edition, 2004.</p>
-<p>[18] T.M. Tango, M.G. Lichtman, and A.E. Dolphin. The Book: Playing
+<p>[19] T.M. Tango, M.G. Lichtman, and A.E. Dolphin. The Book: Playing
 the Percentages in Baseball. Potomac Books, 2007.</p>
-<p>[19] R. Carter Hill, William E Griffiths, and G. C. (Guay C.) Lim.
+<p>[20] R. Carter Hill, William E Griffiths, and G. C. (Guay C.) Lim.
 Principles of econometrics / R. Carter Hill, William E. Griffiths, Guay
 C. Lim. Wiley, Hoboken, fifth edition, 2018.</p>
-<p>[20] Marek Hlavac. stargazer: Well-Formatted Regression and Summary
+<p>[21] Marek Hlavac. stargazer: Well-Formatted Regression and Summary
 Statistics Tables. R package version 5.2.3, 2022.</p>
-<p>[21] Tarek Al Baghal. Are the four factors indicators of one factor?
+<p>[22] Tarek Al Baghal. Are the four factors indicators of one factor?
 an application of structural equation modeling methodology to nba data
 in prediction of winning percentage. Journal of Quantitative Analysis in
 Sports, 8, 01 2012.</p>
-<p>[22] Konstantinos Kotzias. The four factors of basketball as a
+<p>[23] Konstantinos Kotzias. The four factors of basketball as a
 measure of success. <a href="https://statathlon.com/four-factors-basketball-success/" class="uri">https://statathlon.com/four-factors-basketball-success/</a>.
 Accessed: 2022-05-09.</p>
-<p>[23] Duane Rockerbie. The Economics of Professional Sports 2017. 11
+<p>[24] Duane Rockerbie. The Economics of Professional Sports 2017. 11
 2017.</p>
-<p>[24] Synergy Sports Technology. Synergy sports. <a href="https://synergysports.com" class="uri">https://synergysports.com</a>. Accessed: 2022-04-18.</p>
-<p>[25] J. Hollinger. Pro Basketball Forecast. PRO BASKETBALL
+<p>[25] Synergy Sports Technology. Synergy sports. <a href="https://synergysports.com" class="uri">https://synergysports.com</a>. Accessed: 2022-04-18.</p>
+<p>[26] J. Hollinger. Pro Basketball Forecast. PRO BASKETBALL
 PROSPECTUS. Potomac Books, Incorporated, 2005.</p>
-<p>[26] Basketball Reference. Calculating per. <a href="https://www.basketball-reference.com/about/per.html" class="uri">https://www.basketball-reference.com/about/per.html</a>.
+<p>[27] Basketball Reference. Calculating per. <a href="https://www.basketball-reference.com/about/per.html" class="uri">https://www.basketball-reference.com/about/per.html</a>.
 Accessed: 2022-08-12.</p>
-<p>[27] Daniel Myers. Box plus/minus 2.0 example calculations. <a href="https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562" class="uri">https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562</a>.
+<p>[28] Daniel Myers. Box plus/minus 2.0 example calculations. <a href="https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562" class="uri">https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562</a>.
 Accessed: 2022-08-15.</p>
-<p>[28] Bryan Kalbrosky. What is the best advanced statistic for
+<p>[29] Bryan Kalbrosky. What is the best advanced statistic for
 basketball? nba executives weigh in. <a href="https://hoopshype.com/lists/advanced-stats-nba-real-plus-minus-rapm-win-shares-analytics/" class="uri">https://hoopshype.com/lists/advanced-stats-nba-real-plus-minus-rapm-win-shares-analytics/</a>.
 Accessed: 2022-03-01.</p>
 </div>
