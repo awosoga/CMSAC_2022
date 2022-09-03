@@ -37,18 +37,18 @@ proficiency resolved some differences in usage rates but gave way to untrustwort
 sizes and did not properly account for the lower-percentage but increased value of the 3-point
 shot. As new metrics were introduced to try and combat these deficiencies, ambiguity arose
 about their context and employment and little headway in basketball analytics was made until
-the late 1990s. It was then that regression-based statistics were introduced to compare the
+the late 1990s [2]. It was then that regression-based statistics were introduced to compare the
 predictive power and standard error of models and per-game statistics were succeeded by the
 more stable and informative per-minute statistics. Possession-based metrics introduced a new
 wave of analytics that provided a strong correlation with wins on a team level and could be
-broken down for individual players as well [2]. Since teams alternate possessions in a game,
+broken down for individual players as well [3]. Since teams alternate possessions in a game,
 playing basketball was abstracted to an optimization problem of how to maximize a team’s
-per-possession efficiency [3]. Current leaders in advanced NBA analytics involve plus-minus
-statistics [4], such as Box Plus-Minus (BPM) [5], Estimated Plus-Minus (EPM), and Daily
+per-possession efficiency [4]. Current leaders in advanced NBA analytics involve plus-minus
+statistics [5], such as Box Plus-Minus (BPM) [6], Estimated Plus-Minus (EPM), and Daily
 Plus-Minus (DPM). Other metrics with more exotic acronyms have experienced increased
 popularity in recent years, including LEBRON, a player role and luck-adjusted metric from
-BBall Index [6], and RAPTOR, the Robust Algorithm (using) Player Tracking (and) On/Off
-Ratings developed by Nate Silver of FiveThirtyEight [7].
+BBall Index [7], and RAPTOR, the Robust Algorithm (using) Player Tracking (and) On/Off
+Ratings developed by Nate Silver of FiveThirtyEight [8].
 
 # 1.1 Data Collection and Structure
 Boxscores are the most accessible source of detailed game analysis at all levels of basketball.
@@ -60,36 +60,36 @@ sources such as play-by-play and player tracking. Play-by-play data refers to a 
 gives the sequential listing of events that determine a game’s outcome, chronicling the score and
 players on the court at the time of any event occurrence. They contain useful information for
 predicting the outcome of a particular matchup and simulating the progression of events that
-can lead to such an outcome [8]. The introduction of spatio-temporal data via player tracking
+can lead to such an outcome [9]. The introduction of spatio-temporal data via player tracking
 and wearable technologies in the 2010s has revolutionized basketball analytics, as cameras
 are now able to determine the locations of all the players on the court, as well as the (x,y,z)
-coordinates of the ball [9] with incredible accuracy and precision. This has given researchers
+coordinates of the ball [10] with incredible accuracy and precision. This has given researchers
 the ability to determine the relationship between shot selection and opponent location, as well
-as provide improved analysis of individual defensive performance [10] - something historically
+as provide improved analysis of individual defensive performance [11] - something historically
 undervalued by boxscore and play-by-play-based statistics. Bayesian regression models and
 Markov Chains have been used to model player career projections and team evaluations, leading
-to the creation of new metrics [11].
+to the creation of new metrics [12].
 
 The leagues under consideration are University Sports (U SPORTS), the governing body
-and leader of university sport in Canada [12], and the Canadian Elite Basketball League
+and leader of university sport in Canada [13], and the Canadian Elite Basketball League
 (CEBL), the top domestic league in Canada. U SPORTS player and team data is taken from
 ‘Coach’s View’ Season Summary Statistics that are publicly available for each basketball team
-by PrestoSports [13]. Information about player position, which is incorporated in individual
-performance evaluation metrics, is taken from usportshoops [14]. Statistics from the 2015-2016
+by PrestoSports [14]. Information about player position, which is incorporated in individual
+performance evaluation metrics, is taken from usportshoops [15]. Statistics from the 2015-2016
 through 2019-2020 seasons were used as the training set for created models, and the 2021-2022
 season was used as the test set for predictions (the 2020-2021 season was cancelled due to
 the covid-19 pandemic). The CEBL played its inaugural season in 2019 and is comprised of
 talent from leagues such as the NBA G-League, USPORTS, the NCAA, and multiple high-level
 international leagues. Season summary data and roster information for the CEBL is taken from
-RealGM [15]. Since neither league uses player tracking and play-by-play data can be difficult to
+RealGM [16]. Since neither league uses player tracking and play-by-play data can be difficult to
 parse efficiently, the season summaries were taken exclusively from game boxscores. The data
-was collected using web-scraping in the R[16] programming language, and scripts were written
+was collected using web-scraping in the R [17] programming language, and scripts were written
 to calculate advanced statistics from these basic statistics and output them in easy-to-read
 Microsoft Excel tables.
 
 # 1.2 Team Evaluation Using the Four Factors of Basketball
 The Four Factors of Basketball were introduced by statistician and basketball analytics pioneer
-Dean Oliver in his 2003 book Basketball on Paper [17]. They are based on the four main events
+Dean Oliver in his 2003 book Basketball on Paper [18]. They are based on the four main events
 that affect an offensive possession in basketball - a field goal attempt, a turnover, an offensive
 rebound, and a foul. While other more obscure events can affect or terminate a possession,
 the four factors capture the overwhelming majority of possession-ending occurrences, making
@@ -101,7 +101,7 @@ basketball with some slight modifications and estimations.
 adjusting for the extra value gained from a 3-point shot versus a 2-point shot. $eFG = FG+0.5(3P)/FGA$
 * Turnover Percentage (TOV%) measures the percentage of a team’s possessions that
 end in a turnover. Since possessions are not officially tracked in U SPORTS boxscores,
-estimates with good empirical accuracy are used in their place: $POSS ≈ FGA+0.44×FTA − OFF + TO$ [3]. $TOV = TO /POSS$
+estimates with good empirical accuracy are used in their place: $POSS ≈ FGA+0.44×FTA − OFF + TO$ [4]. $TOV = TO /POSS$
 
 * Offensive Rebound Percentage (ORB%) is defined as the percentage of offensive
 rebounds that a team obtains out of total available rebounds from missed field goal
@@ -118,7 +118,7 @@ the CEBL by extending aggregate methods and reports the results, which are summa
 Section 4.
 
 # 2 Expected Win Percentage
-The expected wins model modifies baseball’s “Expected Runs" metric [18] by regressing a
+The expected wins model modifies baseball’s “Expected Runs" metric [19] by regressing a
 team’s wins on the four factors, a useful application of which is the ability to determine the
 “importance" of each factor. Once the factors have been ranked, a strategic framework can be
 devised within a team’s operations to properly allocate time to developing skills that better
@@ -136,7 +136,7 @@ $$Y = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M + ϵ$$
 such that
 $$E(Y |X_1, . . . ,X_M) = β_0 + β_1X_1 + β_2X_2 + . . . + β_MX_M$$
 
-Multiple regression model assumptions [19] must hold so that the parameters $β_0, β_1, . . . , β_M$ of the model can be estimated using Ordinary Least Squares Estimators. Ordinary least squares
+Multiple regression model assumptions [20] must hold so that the parameters $β_0, β_1, . . . , β_M$ of the model can be estimated using Ordinary Least Squares Estimators. Ordinary least squares
 estimators minimize the sum of squared errors for each parameter, represented as
 $$S(β_m) = \sum_{i=1}^{N} (y_i − E(y_i))^2 = \sum_{i=1}^{N} (y_i − β_0 − β_1x_{i1} − . . . − β_Mx_{iM})^2$$
 
@@ -171,7 +171,7 @@ $$WinPecentage =  β_1eFG + β_2TOV + β_3ORB + β_4FTF+ β_5oppeFG + β_6oppTOV
 
 # 2.3 Analysis
 Table 1 report the output of the regressions run from equations 1 ($M_1$ and $W_1$) and 2 ($M_2$ and
-$W_2$), courtesy of the stargazer package from R [20]. The signs on each coefficient align with
+$W_2$), courtesy of the stargazer package from R [21]. The signs on each coefficient align with
 a basic understanding of the game of basketball: shooting, rebounding, and free throws will
 have a positive impact on a team’s success, while turnovers will have a negative effect. The
 opposite intuitively holds for the opposition and is reflected by the coefficients on the “opp"
@@ -182,7 +182,7 @@ which has a p-value of 0.012.
 
 In $M_1$, the adjusted $R^2$ of 0.868 means that the explanatory variables account for nearly 87%
 of the variation in the response variable (win percentage) of the model. This is extremely high
-and comparable with results from NBA datasets [21][22], providing strong evidence in defence
+and comparable with results from NBA datasets [22][23], providing strong evidence in defence
 of the factors’ relationship to winning. The minuscule difference between the original and
 adjusted goodness-of-fit values demonstrates how little penalty each added variable receives.
 Since the factors and dependent variable can be expressed with percentages, they have a very
@@ -292,7 +292,7 @@ team that took advantage of a weak conference schedule en route to a perfect 12-
 winning the RSEQ division. The Redbirds’ 50% difference between their win percentage and
 that of the second place team (Concordia, 6-6) was the largest such gap in any division in
 U SPORTS. Additionally, their division had the smallest divisional parity index as per win
-percentage standard deviation ratios [23], an indicator of the overall closeness of talent within
+percentage standard deviation ratios [24], an indicator of the overall closeness of talent within
 that division. McGill achieved success with an elite defensive scheme, ranking 5th overall in
 opponent FTF%, 6th in opponent TOV%, and 11th in opponent eFG%. This staunch defense
 won the Redbirds multiple "close" regular season games - 9 of their 12 victories came by 6
@@ -315,7 +315,7 @@ contributions to their team’s success in a specific area, a top-down approach.
 takes possession-related statistics such as the four factors and points per possession (PPP) and
 disaggregates them so that player statlines can be used to calculate individual PPP, eFG%,
 TOV%, and FTF%. This technique used in paid applications such as Synergy Sports Technology
-[24] and provides insight into identifying the relative strengths (and weaknesses) of
+[25] and provides insight into identifying the relative strengths (and weaknesses) of
 each player to properly contextualize their valuation. Additionally, play-by-play and spatial
 data make it possible to determine a player’s ORB%, which cannot be computed using only
 boxscore numbers. The other branch of individual player metrics are called “catch-all" statistics,
@@ -323,14 +323,14 @@ a bottom-up approach that aims to summarize observable contributions of a player
 conglomerate them into one number to determine their value. Catch-all metrics are extremely
 useful for overall comparisons of players but are a hotly contested subject area in NBA circles
 due to the relative secrecy of their formulation. However, some of these calculations have been
-publicized, and three of them; Player Efficiency Rating (PER) [25], Box-Plus Minus (BPM)
-[5], and Value over Replacement Player (VORP) [5], will be discussed in greater depth.
+publicized, and three of them; Player Efficiency Rating (PER) [26], Box-Plus Minus (BPM)
+[6], and Value over Replacement Player (VORP) [6], will be discussed in greater depth.
 
 # 3.1 Catch-All Statistics
 PER was created by former ESPN columnist John Hollinger and was the first all-in-one statistic
 to attempt to quantify a player’s value. It takes a players’ boxscore contributions: field goals,
 free throws, 3’s, assists, rebounds, blocks and steals, turnovers, missed shots, and fouls, adding
-the positive contributions and penalizing the negative ones using detailed formulas [26]. It
+the positive contributions and penalizing the negative ones using detailed formulas [27]. It
 adjusts for per-minute productivity and team pace, as well as the league averages in all the
 statistical categories, and is normalized such that a PER of 15 is considered league average. It
 is biased towards offensive output since these totals are better recorded in boxscsores so players
@@ -341,7 +341,7 @@ and better-rounded metric than its predecessor (though still a bit offensively b
 estimates a player’s contribution in points above league average per 100 possessions played. It
 is produced using similar boxscore-based statistics as PER, but also includes a player’s position,
 offensive role, and their teams’ overall performance in the even more comprehensive calculations
-[27]. BPM is set such that league average is 0.0 (0 points above or below average). For example,
+[28]. BPM is set such that league average is 0.0 (0 points above or below average). For example,
 a BPM of 5.0 means that a player’s team is 5 points per 100 possessions better with them on
 the floor than with average production from another player. VORP converts BPM, which
 does not take playing time into account, into an estimate of a player’s overall contribution to
@@ -349,7 +349,7 @@ their team. It is measured against what a theoretical bench/replacement player w
 (someone with a BPM of -2.0 by definition), by including the number of possessions that a
 player has featured in and the fraction of their teams’ games that they have played. VORP
 removes any biases in pace and is considered by many as one of the better measures of actual
-value contributed to a team [28].
+value contributed to a team [29].
 
 <img width="992" alt="Screen Shot 2022-08-23 at 11 24 02 AM" src="https://user-images.githubusercontent.com/111665282/186224601-9eb09840-d0f9-4c29-af64-803c37ab7b68.png">
 
