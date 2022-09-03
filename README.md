@@ -429,79 +429,81 @@ from GitHub at https://github.com/awosoga/CMSAC_2022.
 # References
 [1] David Awosoga. Canadian basketball analytics. https://canadianbasketballanalytics.carrd.co. Accessed: 2022-08-12.
 
-[2] Jeremias Engelmann. Possession-based player performance analysis in basketball (adjusted
+[2] Milos Mudric. How the nba data and analytics revolution has changed the game. https://www.smartdatacollective.com/how-nba-data-analytics-revolution-has-changed-game/. Accessed: 2022-08-19.
+
+[3] Jeremias Engelmann. Possession-based player performance analysis in basketball (adjusted
 +/- and related concepts). 2016.
 
-[3] Justin Kubatko, Dean Oliver, Kevin Pelton, and Dan Rosenbaum. A starting point for
+[4] Justin Kubatko, Dean Oliver, Kevin Pelton, and Dan Rosenbaum. A starting point for
 analyzing basketball statistics. Journal of Quantitative Analysis in Sports, 3:1–1, 02 2007.
 
-[4] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted plus-minus. https://fansided.com/2014/09/25/glossary-plus-minus-adjusted-plusminus/. Accessed:
+[5] Austin Clemens. Nylon calculus 101: Plus-minus and adjusted plus-minus. https://fansided.com/2014/09/25/glossary-plus-minus-adjusted-plusminus/. Accessed:
 2022-02-26.
 
-[5] Daniel Myers. About box plus/minus (bpm). https://www.basketball-reference.com/about/bpm2.html. Accessed: 2022-02-21.
+[6] Daniel Myers. About box plus/minus (bpm). https://www.basketball-reference.com/about/bpm2.html. Accessed: 2022-02-21.
 
-[6] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction. https://www.bball-index.com/lebron-introduction/. Accessed: 2022-03-01.
+[7] Krishna Narsu and Tim/Cranjis McBasketball. Lebron introduction. https://www.bball-index.com/lebron-introduction/. Accessed: 2022-03-01.
 
-[7] Nate Silver. Introducting raptor, our new metric for
+[8] Nate Silver. Introducting raptor, our new metric for
 the modern nba. https://fivethirtyeight.com/features/introducing-raptor-our-new-metric-for-the-modern-nba/. Accessed: 2022-03-01.
 
-[8] Petar Vračar, Erik Štrumbelj, and Igor Kononenko. Modeling basketball play-by-play
+[9] Petar Vračar, Erik Štrumbelj, and Igor Kononenko. Modeling basketball play-by-play
 data. Expert Systems with Applications, 44:58–66, 2016.
 
-[9] Zachary Terner and Alexander Franks. Modeling player and team performance in basketball,
+[10] Zachary Terner and Alexander Franks. Modeling player and team performance in basketball,
 2020.
 
-[10] Alexander Franks, Andrew Miller, Luke Bornn, and Kirk Goldsberry. Characterizing
+[11] Alexander Franks, Andrew Miller, Luke Bornn, and Kirk Goldsberry. Characterizing
 the spatial structure of defensive skill in professional basketball. The Annals of Applied
 Statistics, 9, 05 2014.
 
-[11] Edgar Santos Fernandez, Paul Wu, and Kerrie Mengersen. Bayesian statistics meets
+[12] Edgar Santos Fernandez, Paul Wu, and Kerrie Mengersen. Bayesian statistics meets
 sports: a comprehensive review. Journal of Quantitative Analysis in Sports, 15(4):289–
 312, 2019.
 
-[12] U SPORTS. U sports. https://usports.ca/en. Accessed: 2022-02-21.
+[13] U SPORTS. U sports. https://usports.ca/en. Accessed: 2022-02-21.
 
-[13] PrestoSports. Prestosports | all-in-one sports technology platform. https://www.prestosports.com/landing/index. Accessed: 2022-02-21.
+[14] PrestoSports. Prestosports | all-in-one sports technology platform. https://www.prestosports.com/landing/index. Accessed: 2022-02-21.
 
-[14] Martin Timmerman. U sports hoops, university baskbetball in canada. https://usportshoops.ca. Accessed: 2022-02-21.
+[15] Martin Timmerman. U sports hoops, university baskbetball in canada. https://usportshoops.ca. Accessed: 2022-02-21.
 
-[15] RealGM. Canadian elite basketball league. https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/. Accessed: 2022-
+[16] RealGM. Canadian elite basketball league. https://basketball.realgm.com/international/league/128/Canadian-Elite-Basketball-League/. Accessed: 2022-
 08-01.
 
-[16] R Core Team. R: A Language and Environment for Statistical Computing. R Foundation
+[17] R Core Team. R: A Language and Environment for Statistical Computing. R Foundation
 for Statistical Computing, Vienna, Austria, 2022.
 
-[17] Dean Oliver. Basketball on paper : rules and tools for performance analysis / Dean Oliver.
+[18] Dean Oliver. Basketball on paper : rules and tools for performance analysis / Dean Oliver.
 Brassey’s, Inc., Washington, D.C, 1st ed. edition, 2004.
 
-[18] T.M. Tango, M.G. Lichtman, and A.E. Dolphin. The Book: Playing the Percentages in
+[19] T.M. Tango, M.G. Lichtman, and A.E. Dolphin. The Book: Playing the Percentages in
 Baseball. Potomac Books, 2007.
 
-[19] R. Carter Hill, William E Griffiths, and G. C. (Guay C.) Lim. Principles of econometrics
+[20] R. Carter Hill, William E Griffiths, and G. C. (Guay C.) Lim. Principles of econometrics
 / R. Carter Hill, William E. Griffiths, Guay C. Lim. Wiley, Hoboken, fifth edition, 2018.
 
-[20] Marek Hlavac. stargazer: Well-Formatted Regression and Summary Statistics Tables. R
+[21] Marek Hlavac. stargazer: Well-Formatted Regression and Summary Statistics Tables. R
 package version 5.2.3, 2022.
 
-[21] Tarek Al Baghal. Are the four factors indicators of one factor? an application of structural
+[22] Tarek Al Baghal. Are the four factors indicators of one factor? an application of structural
 equation modeling methodology to nba data in prediction of winning percentage. Journal
 of Quantitative Analysis in Sports, 8, 01 2012.
 
-[22] Konstantinos Kotzias. The four factors of basketball as a measure of success. https:
+[23] Konstantinos Kotzias. The four factors of basketball as a measure of success. https:
 //statathlon.com/four-factors-basketball-success/. Accessed: 2022-05-09.
 
-[23] Duane Rockerbie. The Economics of Professional Sports 2017. 11 2017.
+[24] Duane Rockerbie. The Economics of Professional Sports 2017. 11 2017.
 
-[24] Synergy Sports Technology. Synergy sports. https://synergysports.com. Accessed:
+[25] Synergy Sports Technology. Synergy sports. https://synergysports.com. Accessed:
 2022-04-18.
 
-[25] J. Hollinger. Pro Basketball Forecast. PRO BASKETBALL PROSPECTUS. Potomac
+[26] J. Hollinger. Pro Basketball Forecast. PRO BASKETBALL PROSPECTUS. Potomac
 Books, Incorporated, 2005.
 
-[26] Basketball Reference. Calculating per. https://www.basketball-reference.com/about/per.html. Accessed: 2022-08-12.
+[27] Basketball Reference. Calculating per. https://www.basketball-reference.com/about/per.html. Accessed: 2022-08-12.
 
-[27] Daniel Myers. Box plus/minus 2.0 example calculations. https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562. Accessed: 2022-08-15.
+[28] Daniel Myers. Box plus/minus 2.0 example calculations. https://docs.google.com/spreadsheets/d/1PhD9eo3IqzpQo21-yVJPQzYjpXl_h-ZonIKqGEKBqwY/edit#gid=307166562. Accessed: 2022-08-15.
 
-[28] Bryan Kalbrosky. What is the best advanced statistic for basketball?
+[29] Bryan Kalbrosky. What is the best advanced statistic for basketball?
 nba executives weigh in. https://hoopshype.com/lists/advanced-stats-nba-real-plus-minus-rapm-win-shares-analytics/. Accessed:
 2022-03-01.
