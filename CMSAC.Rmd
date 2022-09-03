@@ -357,7 +357,7 @@ team that took advantage of a weak conference schedule en route to a perfect 12-
 winning the RSEQ division. The Redbirds’ 50% difference between their win percentage and
 that of the second place team (Concordia, 6-6) was the largest such gap in any division in
 U SPORTS. Additionally, their division had the smallest divisional parity index as per win
-percentage standard deviation ratios [23], an indicator of the overall closeness of talent within
+percentage standard deviation ratios [24], an indicator of the overall closeness of talent within
 that division. McGill achieved success with an elite defensive scheme, ranking 5th overall in
 opponent FTF%, 6th in opponent TOV%, and 11th in opponent eFG%. This staunch defense
 won the Redbirds multiple "close" regular season games - 9 of their 12 victories came by 6
