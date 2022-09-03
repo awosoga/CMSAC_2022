@@ -354,7 +354,7 @@ value contributed to a team [28].
 <img width="992" alt="Screen Shot 2022-08-23 at 11 24 02 AM" src="https://user-images.githubusercontent.com/111665282/186224601-9eb09840-d0f9-4c29-af64-803c37ab7b68.png">
 
 # 3.2 Application to the CEBL
-Table 3.1 displays the advanced statistics of the top ten CEBL players, as per VORP. Due
+Table 4 displays the advanced statistics of the top ten CEBL players, as per VORP. Due
 to the relative infancy of the CEBL, these calculations are the first publicly available set of
 their kind [1]. There are many interesting discussions that arise from viewing this table, and
 one example is the power of VORP over BPM and PER in terms of strict player valuation.
@@ -369,7 +369,7 @@ to the CEBL championship and was named finals MVP. However, since his overall im
 the full course of the season was not felt to his team as much as the players ranked ahead of
 him (Carr, 18 games played, Gibson 19, Ahmad 20), VORP accurately definition his value in
 terms of overall contribution to his team’s success.
-When comparing the players from Table 3.1 to their league award considerations, a couple
+When comparing the players from Table 4 to their league award considerations, a couple
 of significant omissions can be found that demonstrate the incompleteness of valuations based
 on traditional counting statistics. Montreal’s Isiah Osborne, who was left off of both Sixth
 Man of the Year and Top Canadian ballots, was second only to the aforementioned Christian
