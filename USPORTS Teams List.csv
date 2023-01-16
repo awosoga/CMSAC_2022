@@ -1,49 +1,49 @@
-﻿Name,Conference
-Acadia,aus
-Alberta,canwest
-Algoma,oua
-Bishops,rseq
-Brandon,canwest
-Brock,oua
-Calgary,canwest
-Cape Breton,aus
-Carleton,oua
-Concordia,rseq
-Dalhousie,aus
-Guelph,oua
-Lakehead,oua
-Laurentian,oua
-Laurier,oua
-Laval,rseq
-Lethbridge,canwest
-MacEwan,canwest
-Manitoba,canwest
-McGill,rseq
-McMaster,oua
-Memorial,aus
-Mount Royal,canwest
-Nipissing,oua
-UBC Okanagan,canwest
-Ontario Tech,oua
-Ottawa,oua
-Queens,oua
-Regina,canwest
-Ryerson,oua
-Saint Marys,aus
-Saskatchewan,canwest
-StFX,aus
-Thompson Rivers,canwest
-Toronto,oua
-Trinity Western,canwest
-UBC,canwest
-UFV,canwest
-UNB,aus
-UNBC,canwest
-UPEI,aus
-UQAM,rseq
-Victoria,canwest
-Waterloo,oua
-Western,oua
-Windsor,oua
-Winnipeg,canwest
-York,oua
+Name,Conference
+Acadia,AUS
+Alberta,CW
+Algoma,OUA
+Bishops,RSEQ
+Brandon,CW
+Brock,OUA
+Calgary,CW
+Cape Breton,AUS
+Carleton,OUA
+Concordia,RSEQ
+Dalhousie,AUS
+Guelph,OUA
+Lakehead,OUA
+Laurentian,OUA
+Laurier,OUA
+Laval,RSEQ
+Lethbridge,CW
+MacEwan,CW
+Manitoba,CW
+McGill,RSEQ
+McMaster,OUA
+Memorial,AUS
+Mount Royal,CW
+Nipissing,OUA
+UBC Okanagan,CW
+Ontario Tech,OUA
+Ottawa,OUA
+Queens,OUA
+Regina,CW
+Ryerson,OUA
+Saint Marys,AUS
+Saskatchewan,CW
+StFX,AUS
+Thompson Rivers,CW
+Toronto,OUA
+Trinity Western,CW
+UBC,CW
+UFV,CW
+UNB,AUS
+UNBC,CW
+UPEI,AUS
+UQAM,RSEQ
+Victoria,CW
+Waterloo,OUA
+Western,OUA
+Windsor,OUA
+Winnipeg,CW
+York,OUA
